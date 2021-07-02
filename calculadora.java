@@ -1,32 +1,21 @@
 package model;
 
-/* 
-Desenvolvedora: Ana Rita Diniz da Cruz
-Algoritmo e teste unitário de uma calculadora de alcance de anúncio que considera os seguintes eventos para as suas previsões:
-
-1. a cada 100 pessoas que visualizam o anúncio 12 clicam nele.
-2. a cada 20 pessoas que clicam no anúncio 3 compartilham nas redes sociais.
-3. cada compartilhamento nas redes sociais gera 40 novas visualizações.
-4. 30 pessoas visualizam o anúncio original (não compartilhado) a cada R$ 1,00 investido.
-5. o mesmo anúncio é compartilhado no máximo 4 vezes em sequência
-(1ª pessoa -> compartilha -> 2ª pessoa -> compartilha - > 3ª pessoa -> compartilha -> 4ª pessoa)
-
-
-Foi criada uma class calculadora que tem compartilhamentos, cliques e visualizações como atributos.
-O método que retorna o número total de visualizações a partir do investimento total é calculaVisualizMax 
-
- * */
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
-
+/**
+ * Classe que calcula o número máximo de visualizações
+ * @author anari
+ *
+ */
 public class calculadora {
 
-	private double CompartQtdMax; // Atributos da calculadora
+	private double CompartQtdMax; 
 	private double ClickQtdMax;
 	private double VisualizQtdMax;
-	
-	public calculadora() { // Construtor de calculadora
+	/**
+	 * Construtor da classe
+	 */
+	public calculadora() { 
 		this.CompartQtdMax = 0;
 		this.ClickQtdMax = 0;
 		this.VisualizQtdMax = 0;
@@ -56,10 +45,14 @@ public class calculadora {
 		this.VisualizQtdMax = visualizQtdMax;
 	}
 	
+	/**
+	 * Implementação da projeção aproximada da quantidade máxima de pessoas
+	 * que visualizarão o anúncio. 
+	 * @param investmTot Valor total investido para promoção do anúncio
+	 * @return Quantidade máxima estimada de visualizações do anúncio
+	 */
+	
 	public double calculaVisualizMax (double investmTot) { 
-
-// Método que obedece lógica solicitada para o cálculo do número máximo de visualizações a partir do investimento total 
-		
 		setVisualizQtdMax(30*investmTot);
 		double Views = getVisualizQtdMax(), Clicks = 0, Shares = 0; // Auxiliares
 		
