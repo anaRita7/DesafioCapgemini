@@ -1,6 +1,6 @@
 # DesafioCapgemini - Execução do projeto
 
-Primeiramente, basta colar o projeto por meio do seguinte comando:
+Primeiramente, basta clonar o projeto por meio do seguinte comando:
 
 git clone https://github.com/anaRita7/DesafioCapgemini.git
 
